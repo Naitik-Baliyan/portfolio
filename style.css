@@ -524,6 +524,22 @@ a {
     font-size: 2.5rem;
   }
 
+  /* Stack hero into a single column on tablet and smaller */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .hero-media {
+    order: -1; /* show image above text for faster visual attention */
+  }
+
+  .hero-media img {
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
   .tagline {
     font-size: 1.1rem;
   }
@@ -538,9 +554,20 @@ a {
     font-size: 0.95rem;
   }
 
+  /* Make primary actions easier to tap */
+  .btn {
+    min-height: 48px;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .project-media img {
+    height: 160px;
   }
 
   .contact-buttons {
@@ -596,6 +623,15 @@ a {
     font-size: 1.8rem;
   }
 
+  /* compact hero for small phones */
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-media img {
+    height: 180px;
+  }
+
   .tagline {
     font-size: 1rem;
   }
@@ -616,6 +652,16 @@ a {
   .project-buttons .btn {
     flex: unset;
     width: 100%;
+  }
+
+  .project-media img {
+    height: 140px;
+  }
+
+  /* ensure nav links remain tappable */
+  .nav-links a {
+    padding: 0.6rem 0.25rem;
+    display: inline-block;
   }
 
   .section-title {
