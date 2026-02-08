@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naitik Baliyan | Full-Stack Developer</title>
+  <meta name="description" content="Full-stack developer designing clean, responsive websites and exploring AI & IoT solutions.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo" aria-label="Home">
+        <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="false">
+          <defs>
+            <linearGradient id="logoGrad" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#16a34a"/>
+              <stop offset="100%" stop-color="#0f766e"/>
+            </linearGradient>
+          </defs>
+          <rect width="44" height="44" rx="10" fill="url(#logoGrad)" />
+          <text x="50%" y="58%" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#fff" font-weight="700">NB</text>
+        </svg>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO / TAGLINE ===== -->
+  <section id="home" class="hero section">
+    <div class="container hero-grid fade-in">
+      <div class="hero-text">
+        <h1>
+          Hi, I'm <span class="highlight">Naitik Baliyan</span>
+        </h1>
+        <h2 class="tagline">Full-Stack Developer | AI Enthusiast | Tech Explorer</h2>
+        <p class="hero-description">
+          I continuously explore AI and IoT to build practical, reliable solutions. I am learning new things, contributing to small projects and real-world solutions, and actively participating in hackathons, ideathons, and tech explorations.
+        </p>
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+      </div>
+      <div class="hero-media" aria-hidden="true">
+        <img src="https://picsum.photos/seed/hero/900/700" alt="Abstract technology illustration" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container fade-in">
+      <h3 class="section-title">About Me</h3>
+
+      <p class="about-text">
+        I am a First year B.Tech student from India with a strong interest in artificial intelligence, and emerging technologies. I enjoy building clean, responsive interfaces and exploring how technology can be used to solve real-world problems.
+      </p>
+
+      <p class="about-text">
+        I believe in logical thinking and learning by building practical projects rather than relying only on theory. I am continuously learning new skills and looking forward to contributing to meaningful projects, real-world solutions, hackathons, ideathons, and collaborative technical work.
+      </p>
+
+      <div class="skills">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">C</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Fullstack Web Development</span>
+          <span class="skill-tag">AI Fundamentals</span>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h3 class="section-title fade-in">Featured Projects</h3>
+
+      <div class="projects-grid">
+        <!-- PROJECT 1: RouteLock -->
+        <div class="project-card slide-in">
+          <div class="project-media">
+            <img src="https://picsum.photos/seed/routelock/800/450" alt="RouteLock preview" loading="lazy">
+          </div>
+          <div class="project-header">
+            <h4 class="project-title">RouteLock</h4>
+            <span class="project-badge">Commuter App</span>
+          </div>
+          <p class="project-description">
+            A web-designed prototype for daily commuters that enhances the travel experience by allowing users to book their weekly rides in one go. Includes a special safety feature focused on women’s security. This project is actively in development.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Full-Stack</span>
+            <span class="tech-tag">Web Prototype</span>
+            <span class="tech-tag">User Safety</span>
+          </div>
+          <div class="project-buttons">
+            <a href="https://github.com/Naitik-Baliyan/Route-Lock" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub Repo</a>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: NabhShakti -->
+        <div class="project-card slide-in">
+          <div class="project-media">
+            <img src="https://picsum.photos/seed/nabhshakti/800/450" alt="NabhShakti preview" loading="lazy">
+          </div>
+          <div class="project-header">
+            <h4 class="project-title">NabhShakti</h4>
+            <span class="project-badge">Disaster Relief</span>
+          </div>
+          <p class="project-description">
+            A web prototype focused on disaster management relief that provides real-time updates on a map of affected areas. Includes a backend with simulated data feeds to model live conditions and support decision-making. This project is actively in development.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Map APIs</span>
+            <span class="tech-tag">Realtime</span>
+            <span class="tech-tag">Backend (Simulated)</span>
+          </div>
+          <div class="project-buttons">
+            <a href="https://github.com/Naitik-Baliyan/NABH-DRISHTI" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub Repo</a>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: Atmos - Repair the Air -->
+        <div class="project-card slide-in">
+          <div class="project-media">
+            <img src="https://picsum.photos/seed/atmos/800/450" alt="Atmos preview" loading="lazy">
+          </div>
+          <div class="project-header">
+            <h4 class="project-title">Atmos — Repair the Air</h4>
+            <span class="project-badge">IoT / Drones</span>
+          </div>
+          <p class="project-description">
+            An IoT project using autonomous drone systems to detect local AQI (Air Quality Index) and perform natural air filtration. The prototype demonstrates coordinated drones, sensor networks, and edge processing for environmental monitoring and remediation. This project is actively under development.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">IoT</span>
+            <span class="tech-tag">Drones</span>
+            <span class="tech-tag">Sensors / AQI</span>
+            <span class="tech-tag">Embedded / Python</span>
+          </div>
+          <div class="project-buttons">
+            <a href="#" class="btn btn-outline btn-sm">Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container fade-in">
+      <h3 class="section-title">Let's Collaborate</h3>
+      <p class="contact-text">
+        I'm always excited to work on meaningful projects, collaborate on innovative ideas, and contribute to communities. Whether you have a project in mind or just want to connect, feel free to reach out.</p>
+
+      <div class="contact-buttons">
+        <a href="https://www.linkedin.com/in/naitik-baliyan-a2656638b" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <span class="btn-icon">💼</span> LinkedIn
+        </a>
+        <a href="https://github.com/Naitik-Baliyan" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <span class="btn-icon">➜</span> GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Naitik Baliyan. Crafted with clean code and creative thinking.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
