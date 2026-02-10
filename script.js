@@ -29,6 +29,31 @@ document.addEventListener('DOMContentLoaded', () => {
   animatedElements.forEach(el => scrollObserver.observe(el));
 });
 
+// Initialize theme from localStorage (light by default)
+document.addEventListener('DOMContentLoaded', () => {
+  const preferred = localStorage.getItem('theme') || 'light';
+  if (preferred === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  else document.documentElement.removeAttribute('data-theme');
+
+  const toggle = document.getElementById('theme-toggle');
+  if (toggle) {
+    const isDark = preferred === 'dark';
+    toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+    toggle.addEventListener('click', () => {
+      const currentlyDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (currentlyDark) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        toggle.setAttribute('aria-pressed', 'false');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        toggle.setAttribute('aria-pressed', 'true');
+      }
+    });
+  }
+});
+
 // ============================================
 // SMOOTH ANCHOR SCROLL HANDLER
 // ============================================
