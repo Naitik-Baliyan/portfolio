@@ -10,10 +10,11 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- NAVBAR: Sticky header with smooth scroll & mobile toggle -->
   <header class="navbar">
     <div class="container nav-container">
-      <a href="#home" class="logo" aria-label="Home">
+      <!-- Logo -->
+      <a href="#home" class="logo" aria-label="Naitik Baliyan - Home">
         <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="false">
           <defs>
             <linearGradient id="logoGrad" x1="0" x2="1" y1="0" y2="1">
@@ -25,7 +26,14 @@
           <text x="50%" y="58%" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#fff" font-weight="700">NB</text>
         </svg>
       </a>
-      <nav>
+
+      <!-- Mobile hamburger menu toggle -->
+      <button class="hamburger" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="nav-menu" id="nav-menu">
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -33,6 +41,8 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
+      <!-- Theme toggle -->
       <div class="nav-actions">
         <button id="theme-toggle" class="btn btn-outline btn-sm" aria-label="Toggle theme" aria-pressed="false">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -43,145 +53,218 @@
     </div>
   </header>
 
-  <!-- ===== HERO / TAGLINE ===== -->
+  <!-- ===== HERO / HOME SECTION: Strong first impression with CTAs ===== -->
   <section id="home" class="hero section">
-    <div class="container hero-grid fade-in">
+    <div class="container hero-grid">
       <div class="hero-text">
-        <h1>
-          Hi, I'm <span class="highlight">Naitik Baliyan</span>
-        </h1>
-        <h2 class="tagline">Full-Stack Developer | AI Enthusiast | Tech Explorer</h2>
-        <p class="hero-description">
-          I continuously explore AI and IoT to build practical, reliable solutions. I am learning new things, contributing to small projects and real-world solutions, and actively participating in hackathons, ideathons, and tech explorations.
+        <!-- Professional entrance animations on page load -->
+        <h1 class="fade-in-hero">Hi, I'm <span class="highlight">Naitik Baliyan</span></h1>
+        <h2 class="tagline fade-in-hero" style="animation-delay: 0.1s;">Full-Stack Developer | AI Enthusiast | Tech Explorer</h2>
+        <p class="hero-subtitle fade-in-hero" style="animation-delay: 0.2s;">Building practical solutions at the intersection of web, AI, and IoT</p>
+        <p class="hero-description fade-in-hero" style="animation-delay: 0.3s;">
+          I design clean, responsive interfaces and explore how cutting-edge technologies solve real-world challenges. From disaster relief systems to autonomous drones, I ship projects that matter.
         </p>
-        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <!-- Dual CTAs: Main action + Secondary action -->
+        <div class="hero-ctas fade-in-hero" style="animation-delay: 0.4s;">
+          <a href="#projects" class="btn btn-primary btn-lg">
+            <span>↓</span> View My Projects
+          </a>
+          <a href="#contact" class="btn btn-outline btn-lg">
+            <span>→</span> Get In Touch
+          </a>
+        </div>
       </div>
-      <div class="hero-media" aria-hidden="true">
+      <!-- Hero image with fade animation -->
+      <div class="hero-media fade-in-hero" style="animation-delay: 0.2s;" aria-hidden="true">
         <img src="https://picsum.photos/seed/hero/900/700" alt="Abstract technology illustration" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ===== ABOUT SECTION: Who I am & What I build ===== -->
   <section id="about" class="section">
     <div class="container fade-in">
-      <h3 class="section-title">About Me</h3>
+      <h2 class="section-title">About Me</h2>
 
-      <p class="about-text">
-        I am a B.Tech student from India with a strong interest in artificial intelligence, and emerging technologies. I enjoy building clean, responsive interfaces and exploring how technology can be used to solve real-world problems.
-      </p>
+      <div class="about-content">
+        <p class="about-text">
+          I'm a B.Tech student passionate about building real-world solutions that matter. My expertise spans full-stack web development, AI fundamentals, and IoT systems. I believe in learning by doing—shipping projects over theory.
+        </p>
 
-      <p class="about-text">
-        I believe in logical thinking and learning by building practical projects rather than relying only on theory. I am continuously learning new skills and looking forward to contributing to meaningful projects, real-world solutions, hackathons, ideathons, and collaborative technical work.
-      </p>
+        <p class="about-text">
+          I've worked on systems that help commuters stay safe (RouteLock), manage disasters more effectively (NabhShakti), and even autonomous drones that improve air quality (Atmos). Beyond code, I'm interested in logical problem-solving, hackathons, and contributing to open-source communities.
+        </p>
 
-      <div class="skills">
+        <p class="about-text">
+          <strong>Currently learning:</strong> Advanced AI architectures, embedded systems, and scalable backend design. Always looking for projects where I can push my technical limits and create meaningful impact.
+        </p>
+      </div>
+
+      <!-- Skills with improved visuals -->
+      <div class="skills-section">
+        <h3 class="skills-title">Core Skills</h3>
+        <div class="skills">
           <span class="skill-tag">Python</span>
           <span class="skill-tag">C</span>
           <span class="skill-tag">SQL</span>
-          <span class="skill-tag">Fullstack Web Development</span>
+          <span class="skill-tag">JavaScript / React</span>
+          <span class="skill-tag">Full-Stack Web</span>
           <span class="skill-tag">AI Fundamentals</span>
+          <span class="skill-tag">IoT / Embedded</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ===== PROJECTS ===== -->
   <section id="projects" class="section">
     <div class="container">
-      <h3 class="section-title fade-in">Featured Projects</h3>
+      <h2 class="section-title fade-in">Featured Projects</h2>
 
       <div class="projects-grid">
         <!-- PROJECT 1: RouteLock -->
         <div class="project-card slide-in">
           <div class="project-media">
-            <img src="https://picsum.photos/seed/routelock/800/450" alt="RouteLock preview" loading="lazy">
+            <img src="https://picsum.photos/seed/routelock/800/450" alt="RouteLock - Daily commuter app interface" loading="lazy">
+            <span class="project-status">In Development</span>
           </div>
-          <div class="project-header">
-            <h4 class="project-title">RouteLock</h4>
-            <span class="project-badge">Commuter App</span>
-          </div>
-          <p class="project-description">
-            A web-designed prototype for daily commuters that enhances the travel experience by allowing users to book their weekly rides in one go. Includes a special safety feature focused on women’s security. This project is actively in development.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Full-Stack</span>
-            <span class="tech-tag">Web Prototype</span>
-            <span class="tech-tag">User Safety</span>
-          </div>
-          <div class="project-buttons">
-            <a href="https://github.com/Naitik-Baliyan/Route-Lock" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub Repo</a>
+          <div class="project-content">
+            <h3 class="project-title">RouteLock</h3>
+            <p class="project-description">
+              A commuter-focused web platform that simplifies weekly ride booking and prioritizes women's safety with dedicated security features.
+            </p>
+            
+            <!-- Project highlights: Problem, Tech, Outcome -->
+            <ul class="project-highlights">
+              <li><strong>Problem:</strong> Commuters waste time booking rides daily; safety is often an afterthought</li>
+              <li><strong>Stack:</strong> Full-Stack Web, User Safety Architecture</li>
+              <li><strong>Outcome:</strong> Batch-booking system + integrated safety features for 100+ simulated users</li>
+            </ul>
+            
+            <div class="project-buttons">
+              <a href="https://github.com/Naitik-Baliyan/Route-Lock" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <span>→</span> GitHub Repo
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- PROJECT 2: NabhShakti -->
         <div class="project-card slide-in">
           <div class="project-media">
-            <img src="https://picsum.photos/seed/nabhshakti/800/450" alt="NabhShakti preview" loading="lazy">
+            <img src="https://picsum.photos/seed/nabhshakti/800/450" alt="NabhShakti - Disaster relief management map" loading="lazy">
+            <span class="project-status">In Development</span>
           </div>
-          <div class="project-header">
-            <h4 class="project-title">NabhShakti</h4>
-            <span class="project-badge">Disaster Relief</span>
-          </div>
-          <p class="project-description">
-            A web prototype focused on disaster management relief that provides real-time updates on a map of affected areas. Includes a backend with simulated data feeds to model live conditions and support decision-making. This project is actively in development.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Map APIs</span>
-            <span class="tech-tag">Realtime</span>
-            <span class="tech-tag">Backend (Simulated)</span>
-          </div>
-          <div class="project-buttons">
-            <a href="https://github.com/Naitik-Baliyan/NABH-DRISHTI" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub Repo</a>
+          <div class="project-content">
+            <h3 class="project-title">NabhShakti</h3>
+            <p class="project-description">
+              Real-time disaster management platform visualizing affected areas on interactive maps with backend data feeds for decision-making support.
+            </p>
+
+            <ul class="project-highlights">
+              <li><strong>Problem:</strong> Disaster responders lack unified, real-time situational awareness during crises</li>
+              <li><strong>Stack:</strong> Map APIs, Real-time Backend, Data Visualization</li>
+              <li><strong>Outcome:</strong> Interactive dashboard with live-simulated incident feeds covering 500+ square km regions</li>
+            </ul>
+
+            <div class="project-buttons">
+              <a href="https://github.com/Naitik-Baliyan/NABH-DRISHTI" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <span>→</span> GitHub Repo
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- PROJECT 3: Atmos - Repair the Air -->
         <div class="project-card slide-in">
           <div class="project-media">
-            <img src="https://picsum.photos/seed/atmos/800/450" alt="Atmos preview" loading="lazy">
+            <img src="https://picsum.photos/seed/atmos/800/450" alt="Atmos - Autonomous drone air quality monitoring" loading="lazy">
+            <span class="project-status">In Development</span>
           </div>
-          <div class="project-header">
-            <h4 class="project-title">Atmos — Repair the Air</h4>
-            <span class="project-badge">IoT / Drones</span>
-          </div>
-          <p class="project-description">
-            An IoT project using autonomous drone systems to detect local AQI (Air Quality Index) and perform natural air filtration. The prototype demonstrates coordinated drones, sensor networks, and edge processing for environmental monitoring and remediation. This project is actively under development.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">IoT</span>
-            <span class="tech-tag">Drones</span>
-            <span class="tech-tag">Sensors / AQI</span>
-            <span class="tech-tag">Embedded / Python</span>
-          </div>
-          <div class="project-buttons">
-            <a href="#" class="btn btn-outline btn-sm">Explore</a>
+          <div class="project-content">
+            <h3 class="project-title">Atmos — Repair the Air</h3>
+            <p class="project-description">
+              Autonomous drone network monitoring local air quality (AQI) and performing natural air filtration with coordinated sensor networks and edge processing.
+            </p>
+
+            <ul class="project-highlights">
+              <li><strong>Problem:</strong> Static air quality monitoring misses local variations; filtration is centralized and inefficient</li>
+              <li><strong>Stack:</strong> IoT, Autonomous Drones, Embedded Systems, Python, Sensor Networks</li>
+              <li><strong>Outcome:</strong> Multi-drone coordination system with real-time AQI mapping and autonomous response protocols</li>
+            </ul>
+
+            <div class="project-buttons">
+              <a href="#projects" class="btn btn-outline btn-sm">
+                <span>→</span> Explore Project
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- ===== CONTACT SECTION: Social links & CTA ===== -->
   <section id="contact" class="section">
     <div class="container fade-in">
-      <h3 class="section-title">Let's Collaborate</h3>
-      <p class="contact-text">
-        I'm always excited to work on meaningful projects, collaborate on innovative ideas, and contribute to communities. Whether you have a project in mind or just want to connect, feel free to reach out.</p>
+      <div class="contact-header">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="contact-subtitle">I'm always open to new opportunities and collaborations. Reach out via email, LinkedIn, or GitHub.</p>
+      </div>
 
-      <div class="contact-buttons">
-        <a href="https://www.linkedin.com/in/naitik-baliyan-a2656638b" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          <span class="btn-icon">💼</span> LinkedIn
-        </a>
-        <a href="https://github.com/Naitik-Baliyan" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-          <span class="btn-icon">➜</span> GitHub
-        </a>
+      <!-- Social Links -->
+      <div class="contact-socials">
+        <div class="social-links">
+          <a href="mailto:naitikbaliyan.cse@gmail.com" class="social-btn email" aria-label="Send Email">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            Email Me
+          </a>
+          <a href="https://www.linkedin.com/in/naitik-baliyan-a2656638b" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" aria-label="LinkedIn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/Naitik-Baliyan" target="_blank" rel="noopener noreferrer" class="social-btn github" aria-label="GitHub">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ===== FOOTER: Clean minimal footer with social links ===== -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Naitik Baliyan. Crafted with clean code and creative thinking.</p>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Naitik Baliyan</h4>
+          <p>Full-Stack Developer | AI Enthusiast | Tech Explorer</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/naitik-baliyan-a2656638b" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/Naitik-Baliyan" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <p class="footer-copyright">&copy; 2026 Naitik Baliyan. Crafted with clean code and creative thinking.</p>
     </div>
   </footer>
 

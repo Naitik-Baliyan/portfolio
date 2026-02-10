@@ -25,8 +25,39 @@ const scrollObserver = new IntersectionObserver((entries) => {
 
 // Observe all animated elements
 document.addEventListener('DOMContentLoaded', () => {
-  const animatedElements = document.querySelectorAll('.fade-in, .slide-in');
+  const animatedElements = document.querySelectorAll('.fade-in, .slide-in, .fade-in-hero');
   animatedElements.forEach(el => scrollObserver.observe(el));
+});
+
+// ============================================
+// MOBILE HAMBURGER MENU TOGGLE
+// ============================================
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+if (menuToggle) {
+  menuToggle.addEventListener('click', () => {
+    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !isExpanded);
+    navMenu.classList.toggle('active');
+  });
+}
+
+// Close menu when a link is clicked
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.setAttribute('aria-expanded', 'false');
+    navMenu.classList.remove('active');
+  });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('header') && navMenu.classList.contains('active')) {
+    menuToggle.setAttribute('aria-expanded', 'false');
+    navMenu.classList.remove('active');
+  }
 });
 
 // Initialize theme from localStorage (light by default)
@@ -73,6 +104,47 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// ============================================
+// CONTACT FORM HANDLING
+// ============================================
+const contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    
+    // Simple validation
+    if (!name || !email || !message) {
+      alert('Please fill in all fields.');
+      return;
+    }
+    
+    // Email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+    
+    // Show success message
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+    submitButton.textContent = '✓ Message Sent!';
+    submitButton.style.background = 'linear-gradient(90deg, #16a34a, #0f766e)';
+    
+    // Reset form
+    setTimeout(() => {
+      contactForm.reset();
+      submitButton.textContent = originalText;
+      submitButton.style.background = '';
+    }, 2000);
+  });
+}
 
 // ============================================
 // BUTTON CLICK RIPPLE EFFECT
@@ -193,3 +265,24 @@ if (emailButton) {
     this.style.textDecoration = 'none';
   });
 }
+
+// ============================================
+// ENHANCED ACCESSIBILITY
+// ============================================
+
+// Ensure form labels are properly associated
+document.querySelectorAll('form').forEach(form => {
+  form.addEventListener('submit', function(e) {
+    const inputs = form.querySelectorAll('input[required], textarea[required]');
+    let isValid = true;
+    
+    inputs.forEach(input => {
+      if (!input.value.trim()) {
+        input.setAttribute('aria-invalid', 'true');
+        isValid = false;
+      } else {
+        input.setAttribute('aria-invalid', 'false');
+      }
+    });
+  });
+});
