@@ -135,7 +135,7 @@ if (contactForm) {
     const submitButton = contactForm.querySelector('button[type="submit"]');
     const originalText = submitButton.textContent;
     submitButton.textContent = '✓ Message Sent!';
-    submitButton.style.background = 'linear-gradient(90deg, #16a34a, #0f766e)';
+    submitButton.style.background = 'linear-gradient(90deg, var(--accent-2), var(--accent))';
     
     // Reset form
     setTimeout(() => {
@@ -217,10 +217,10 @@ document.querySelectorAll('.project-card').forEach(card => {
 document.querySelectorAll('.skill-tag').forEach(tag => {
   tag.style.cursor = 'pointer';
   tag.addEventListener('mouseenter', function() {
-    this.style.background = 'var(--surface)';
+    this.style.background = 'var(--surface)'; /* remains variable based */
   });
   tag.addEventListener('mouseleave', function() {
-    this.style.background = 'var(--white)';
+    this.style.background = 'var(--white)'; /* remain variable */
   });
 });
 
